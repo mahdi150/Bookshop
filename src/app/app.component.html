@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container px-5">
+        <a class="navbar-brand" ><img class="site-logo" src="https://rails-assets-us.bookshop.org/assets/logo_light-c650cee1761bf7cfee9351767c3e098191eca1aeac77db1455aee5313383f2ef.svg"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" routerLink='site'><i class="fas fa-home "></i></a></li>
+                <li class="nav-item"><a class="nav-link" routerLink='home/products'>Find Your Book</a></li>
+ 
+                <li class="nav-item"><a class="nav-link" routerLink='signUp' *ngIf="userService.currentUser.name==undefined" > signUp </a></li>
+                <li class="nav-item"><a class="nav-link"  *ngIf="userService.currentUser.name!=undefined" >{{userService.currentUser.name}}  </a></li>
+                <li><i></i></li>
+                <li class="nav-item f1"><a class="nav-link" routerLink='/home/cart'><i class="fas fa-shopping-cart "></i></a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<router-outlet></router-outlet>
+ <!-- Footer-->
+ <footer class="py-5 bg-black">
+    <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Your Website 2021</p></div>
+    <div class="container px-5"><p class="m-0 text-center text-white small">By Mahdi Mhadhby</p></div>
+
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="polyfills.ts"></script>
+
+
+
+
+
+
