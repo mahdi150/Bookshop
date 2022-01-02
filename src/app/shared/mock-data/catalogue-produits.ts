@@ -27,6 +27,4 @@ export const CATALOGUE : Produit [] = [
     
     ];
     
-export const CATALOGU : Produit [] = [
-    
-    ];
+
