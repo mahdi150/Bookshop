@@ -125,3 +125,6 @@ button:focus {
     width: 600px;
     margin-left: 120px;
 }
+.top{
+    margin-top: 8px;
+}

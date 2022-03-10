@@ -8,6 +8,7 @@ import { HomeProductsComponent } from './home-products/home-products.component';
 import { SignupComponent } from './signup.component';
 import { CartComponent } from './cart/cart.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeProducts2Component } from './home-products2/home-products2.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeProductDetailComponent,
     HomeProductsComponent,
     SignupComponent,
-    CartComponent
+    CartComponent,
+    HomeProducts2Component
   ],
   imports: [
     CommonModule,

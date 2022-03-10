@@ -1,0 +1,61 @@
+ 
+
+
+<section>
+  
+    <h1 class="text-info ">{{title}}</h1>
+    <div class=" bg-gray-200">
+      <div class="container h-screen flex justify-center items-center px-4 sm:px-6 lg:px-8 s1">
+          <div class="relative"> <input type="text" class="h-14 w-96 pr-8 pl-5 rounded z-0 focus:shadow focus:outline-none" placeholder="Search Book...">
+          </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-3">   </div>
+      <div class="row">
+          <div class="col-md-4" *ngFor="let prod of Produits" >
+              <div class="card">
+                <div class="content">
+                  <div class="d-flex justify-content-between align-items-center">
+                      <div class="d-flex flex-row align-items-center time"> </div>
+                  </div>
+                  <div class="text-center" class="img-thumbnail"> <img [src]= 'prod.image' width="250" height="250" > </div>
+                  <div class="text-center" >
+                    
+                      <h5>{{prod.nom}} </h5> <span class="text-success">Price : {{prod.prix}}</span>
+                      <br>
+                      
+                      <button type="button"  class="btn btn-info bt11" (click)="AddToCart(prod)"><i class="fas fa-cart-plus fa-lg mr-2"></i>Add To Cart</button>
+                      <br>
+                      <button type="button" class="btn btn-primary bt2" *ngIf="prod.description" (click)="onDetail(prod)">Details</button>
+                     <hr>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      
+      </div>
+    </div>
+    </section>   
+    
+    <div class="card-footer">
+      <nav aria-label="Contacts Page Navigation">
+        <ul class="pagination justify-content-center m-0">
+          <li class="page-item"><a class="page-link" routerLink='/home/products'>1</a></li>
+          <li class="page-item active"><a class="page-link" routerLink="home">2</a></li>
+          <li class="page-item"><a class="page-link" routerLink="home">3</a></li>
+          <li class="page-item"><a class="page-link" routerLink="home">4</a></li>
+          <li class="page-item"><a class="page-link" routerLink="home">5</a></li>
+          <li class="page-item"><a class="page-link" routerLink="home">6</a></li>
+          <li class="page-item"><a class="page-link" routerLink="home">7</a></li>
+          <li class="page-item"><a class="page-link" routerLink="home">8</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    
+    
+    
+    
+     <app-home-product-detail ></app-home-product-detail>>
+    
